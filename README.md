@@ -1,4 +1,4 @@
-# Inmobiliaria Mónica Anzola
+# Inmobiliaria 
 
 Plataforma inmobiliaria SaaS para la asesora Mónica Anzola. Permite publicar, explorar y contactar propiedades (casas, apartamentos, locales) en venta y arriendo.
 

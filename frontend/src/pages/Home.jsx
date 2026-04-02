@@ -124,7 +124,7 @@ export default function Home() {
             style={{ background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.35)', color: '#F0C040' }}
           >
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-            Agencia Inmobiliaria Premium
+            Costa Blanca Inmuebles
           </MotionDiv>
 
           {/* Headline */}
@@ -147,8 +147,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Casas, apartamentos y locales para venta y arriendo.
-            Te acompañamos en cada paso de tu proceso inmobiliario con total transparencia.
+            Casas, apartamentos y locales en la Costa Blanca para venta y arriendo.
+            Te acompañamos en cada paso con total transparencia y atención personalizada.
           </MotionP>
 
           {/* Search & filters */}
@@ -260,6 +260,82 @@ export default function Home() {
         </div>
       </header>
 
+      {/* ── Why choose us section ───────────────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-4 pt-16 pb-8">
+        <MotionDiv
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10"
+        >
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase mb-3"
+            style={{ background: 'rgba(212,175,55,0.12)', border: '1px solid rgba(212,175,55,0.3)', color: '#F0C040' }}>
+            ¿Por qué elegirnos?
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold text-white">
+            Servicio inmobiliario <span style={{ background: 'linear-gradient(135deg, #F0C040, #D4AF37)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>de calidad</span>
+          </h2>
+          <p className="text-slate-400 text-sm mt-2 max-w-xl mx-auto">
+            En Costa Blanca Inmuebles nos comprometemos a brindarte la mejor asesoría para comprar, vender o arrendar tu propiedad.
+          </p>
+        </MotionDiv>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              emoji: '🏠',
+              title: 'Amplio catálogo',
+              desc: 'Contamos con una variada selección de casas, apartamentos y locales comerciales para todos los presupuestos.',
+            },
+            {
+              emoji: '🤝',
+              title: 'Asesoría personalizada',
+              desc: 'Nuestro equipo te guía en cada etapa del proceso, desde la búsqueda hasta la firma del contrato.',
+            },
+            {
+              emoji: '🔒',
+              title: 'Seguridad y transparencia',
+              desc: 'Trabajamos con total honestidad. Toda la información sobre precios y condiciones es clara desde el primer contacto.',
+            },
+            {
+              emoji: '📍',
+              title: 'Ubicación estratégica',
+              desc: 'Propiedades ubicadas en las mejores zonas de la Costa Blanca, con fácil acceso a servicios y comodidades.',
+            },
+            {
+              emoji: '💬',
+              title: 'Atención inmediata',
+              desc: 'Respuesta rápida por WhatsApp, teléfono o redes sociales. Estamos disponibles para resolver todas tus dudas.',
+            },
+            {
+              emoji: '⭐',
+              title: 'Clientes satisfechos',
+              desc: 'La confianza de nuestros clientes es nuestro mayor aval. Te ayudamos a encontrar el hogar de tus sueños.',
+            },
+          ].map((item, i) => (
+            <MotionDiv
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: i * 0.08 }}
+              className="flex flex-col gap-3 p-6 rounded-2xl"
+              style={{ background: 'rgba(10,10,10,0.8)', border: '1px solid rgba(212,175,55,0.12)' }}
+            >
+              <span className="text-3xl">{item.emoji}</span>
+              <h3 className="text-white font-bold text-base">{item.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+            </MotionDiv>
+          ))}
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(212,175,55,0.25), transparent)' }} />
+      </div>
+
       {/* ── Catalog section ─────────────────────────────────────────────────── */}
       <main className="max-w-7xl mx-auto px-4 py-16">
         {/* Section header */}
@@ -347,11 +423,65 @@ export default function Home() {
 
       {/* ── Footer ──────────────────────────────────────────────────────────── */}
       <footer
-        className="text-center py-8 text-sm"
-        style={{ background: 'rgba(0,0,0,0.9)', borderTop: '1px solid rgba(212,175,55,0.15)', color: '#4a6480' }}
+        style={{ background: 'rgba(0,0,0,0.95)', borderTop: '1px solid rgba(212,175,55,0.15)' }}
       >
-        © {new Date().getFullYear()} Inmobiliaria Premium ·{' '}
-        <span style={{ color: '#D4AF37' }}>Agencia Inmobiliaria</span>
+        <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {/* Brand */}
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#9B7E28] flex items-center justify-center shadow-lg">
+                <span className="text-black text-xs font-bold">CB</span>
+              </div>
+              <span className="font-bold text-white text-base">Costa Blanca <span className="text-[#D4AF37]">Inmuebles</span></span>
+            </div>
+            <p className="text-slate-500 text-sm leading-relaxed">
+              Tu inmobiliaria de confianza en la Costa Blanca. Compra, vende y arrienda con la mejor asesoría.
+            </p>
+          </div>
+
+          {/* Links */}
+          <div className="flex flex-col gap-2">
+            <p className="text-[#D4AF37] font-semibold text-sm mb-1 uppercase tracking-widest">Servicios</p>
+            {['Venta de propiedades', 'Arriendo de inmuebles', 'Asesoría inmobiliaria', 'Gestión de contratos'].map((s) => (
+              <span key={s} className="text-slate-500 text-sm hover:text-slate-300 transition-colors cursor-default">{s}</span>
+            ))}
+          </div>
+
+          {/* Contact */}
+          <div className="flex flex-col gap-2">
+            <p className="text-[#D4AF37] font-semibold text-sm mb-1 uppercase tracking-widest">Contacto</p>
+            <a
+              href={AGENT_WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 text-sm hover:text-green-400 transition-colors flex items-center gap-1.5"
+            >
+              <MessageCircle size={13} /> WhatsApp
+            </a>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 text-sm hover:text-blue-400 transition-colors flex items-center gap-1.5"
+            >
+              <Facebook size={13} /> Facebook
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 text-sm hover:text-pink-400 transition-colors flex items-center gap-1.5"
+            >
+              <Instagram size={13} /> Instagram
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-[#D4AF37]/10 py-5 text-center text-xs text-slate-600">
+          © {new Date().getFullYear()} Costa Blanca Inmuebles · Todos los derechos reservados ·{' '}
+          <span style={{ color: '#D4AF37' }}>Tu inmobiliaria de confianza</span>
+        </div>
       </footer>
     </div>
   )

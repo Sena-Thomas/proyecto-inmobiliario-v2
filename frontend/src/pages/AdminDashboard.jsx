@@ -264,7 +264,7 @@ export default function AdminDashboard() {
             <LayoutDashboard className="text-emerald-400" size={28} />
             <div>
               <h1 className="text-2xl font-bold text-white">Panel de Administrador</h1>
-              <p className="text-slate-400 text-sm">Inmobiliaria Premium</p>
+              <p className="text-slate-400 text-sm">Costa Blanca Inmuebles</p>
             </div>
           </div>
           <button
@@ -367,16 +367,16 @@ export default function AdminDashboard() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <Field label="Precio (COP) *" icon={<Tag size={14} />}>
+                  <Field label="Precio (€) *" icon={<Tag size={14} />}>
                     <input
                       required
                       type="number"
                       min="0"
-                      step="1000"
+                      step="any"
                       value={form.precio}
                       onChange={(e) => setForm({ ...form, precio: e.target.value })}
                       className="input-dark"
-                      placeholder="250000000"
+                      placeholder="150000"
                     />
                   </Field>
                   <Field label="Tamaño (m²)" icon={<Maximize2 size={14} />}>

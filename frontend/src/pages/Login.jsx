@@ -104,7 +104,7 @@ export default function Login() {
               <Building2 size={22} className="text-black" />
             </div>
             <span className="font-bold text-xl text-white group-hover:text-[#F0C040] transition-colors">
-              Inmobiliaria <span className="text-[#D4AF37]">Premium</span>
+              Costa Blanca <span className="text-[#D4AF37]">Inmuebles</span>
             </span>
           </Link>
         </div>
@@ -176,6 +176,7 @@ export default function Login() {
                 className="input-dark"
                 placeholder="tucorreo@ejemplo.com"
               />
+              <span className="text-slate-600 text-[11px]">Gmail, Hotmail, Yahoo y cualquier otro proveedor son bienvenidos.</span>
             </label>
 
             <label className="flex flex-col gap-1.5">
